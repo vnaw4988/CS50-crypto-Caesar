@@ -1,29 +1,29 @@
 import sys
- import cs50
+import cs50
  
  
  
- if (len(sys.argv) != 3 ):
+if (len(sys.argv) != 3 ):
      sys.exit("Usage: caesar <key> hello")
  
- key = int(sys.argv[1])
- mystr = str(sys.argv[2])
- newstr = []
+key = int(sys.argv[1])
+mystr = str(sys.argv[2])
+newstr = []
  
- #bytearray(mystring)
+#bytearray(mystring)
  
- print(mystr)
- print(key)
+print(mystr)
+print(key)
  
- length = len(mystr)
+length = len(mystr)
  
- for i in range(length):
-     #print(ord(mystring[i]))
-     #print(chr(104), chr(101))
-     if ord(mystr[i]) > 64 and ord(mystr[i]) < 91:
-         newstr.append(chr( ((ord(mystr[i]) - 65 + key)%26)+65 ))
-         print(chr( ((ord(mystr[i]) - 65 + key)%26)+65 ))
-     elif ord(mystr[i]) > 96 and ord(mystr[i]) < 123:
-         newstr.append(chr( ((ord(mystr[i]) - 97 + key)%26)+97 ))
+for i in range(length):
+    #print(ord(mystring[i]))
+    #print(chr(104), chr(101))
+    if ord(mystr[i]) > 64 and ord(mystr[i]) < 91:
+        newstr.append(chr( ((ord(mystr[i]) - 65 + key)%26)+65 ))
+        print(chr( ((ord(mystr[i]) - 65 + key)%26)+65 ))
+    elif ord(mystr[i]) > 96 and ord(mystr[i]) < 123:
+        newstr.append(chr( ((ord(mystr[i]) - 97 + key)%26)+97 ))
  
- print("".join(newstr))
+print("".join(newstr))
