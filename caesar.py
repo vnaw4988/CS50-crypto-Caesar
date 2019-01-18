@@ -1,8 +1,7 @@
 import sys
 import cs50
  
- 
- 
+# User Input here
 if (len(sys.argv) != 3 ):
      sys.exit("Usage: caesar <key> hello")
  
